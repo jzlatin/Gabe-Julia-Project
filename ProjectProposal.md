@@ -23,14 +23,16 @@ Develop the web application using HTML and CSS
  
 ## Project Schedule
 Week 1 (4/11):
-Complete sourcing data
-Complete Python code
+* Complete sourcing data
+* Complete Python code
+
 Week 2 (4/18):
-Complete web framework
-Complete web app template
+* Complete web framework
+* Complete web app template
+
 Week 3 (4/25):
-Create User Instructions/README
-Deploy project to Heroku
+* Create User Instructions/README
+* Deploy project to Heroku
  
 ## Collaboration Plan
 Our collaboration plan is to split up some of the more straightforward parts of the work and pair program the more difficult sections. For instance, one member will web scrape the data, while the other will perform some basic summary statistics. We will pair program the word frequency analysis by switching off who is driving the code and navigating the code every so often.
@@ -42,8 +44,8 @@ One risk is that some gender-coded keywords can be hard to distinguish. Another 
  
 ## Additional Course Content
 Some topics that we covered in class that are especially relevant to our project are:
-Text analysis
-Data types and structures
-Web Scraping
-Flask
-HTML
+* Text analysis
+* Data types and structures
+* Web Scraping
+* Flask
+* HTML
