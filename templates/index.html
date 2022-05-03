@@ -1,0 +1,194 @@
+<!-- cite: https://github.com/StartBootstrap/startbootstrap-grayscale -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title></title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Radio+Canada" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top"></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">Job Description Decoder</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Your Gendered Words</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">Test Case / Reflection</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">Gender Bias Helper</h1> <br>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">
+                            Find out if your job description is masculine, feminine, or gender neutral.
+                        </h2>
+                        <a class="btn btn-primary" href="#about">Try Now.</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <form action="/" method="post">
+
+<!--                            Text Area Add here-->
+                                      <div class="form-group">
+                                        <label for="getdata" style="color:white;">Paste Job Description Here</label>
+                                        <textarea class="form-control" id="getdata" name="getdata" rows="8"></textarea>
+                                      </div>
+
+<!--                            Text Area finish here-->
+                                        <br>
+                                        <div class="row input-group-newsletter">
+                                            <div class="col-auto">
+                                                <button class="btn btn-primary"  type="submit" style="margin-left:250%;">
+                                                    Analyze
+                                                </button>
+                                            </div>
+                                            <br><br><br><br>
+                                            <h1 style="color:white;">{{returned_pred}}</h1>
+                                        </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="https://content.presspage.com/uploads/1376/c1920_womenintech-299653.jpg" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>The Gendered Words in Your Text:</h4>
+                            <p class="text-black-50 mb-0">
+                                      Here are the feminine words from your text: {{feminine}}<br>
+                                      Here are the masculine words from your text: {{masculine}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="https://www.projectboldlife.com/images/2019/10/being-professional-at-work.jpg" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Did you know?</h4>
+                                    <p class="mb-0 text-white-50">"A typical Fortune 500 company that hires 8,000 new employees a year with a 1% gender bias effect can expect 32 additional failed hires and many more sub-optimal hiring decisions, resulting in productivity losses of about $2.8 million per year. A 4% bias effect would lead to an additional 192 failed hires and an additional $17 million in lost productivity." - Michelle Klampe, Writer in News and Research at Oregon State University</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="https://bohmlaw.com/wp-content/uploads/2017/01/gender-discrimination-web.jpg" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Why this tool matters.</h4>
+                                    <p class="mb-0 text-white-50">Masculine-coded job descriptions lowers job appeal, a feeling of belongingness, and a likelihood to apply for women. A study presented 6 job descriptions to a group of 96 participants. Findings suggest the masculine job descriptions deterred women from applying to those jobs. The reason for this behavior is supported by the fact that the subjects, both men and women, perceived that men would be the ones in those roles. These masculine job descriptions are ultimately telling women they are unfit for the position.</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="https://blog.ezclocker.com/wp-content/uploads/2018/04/job-description-compressed-1024x683.jpg" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Need a test case? Copy and paste the following text into the tool:</h4>
+                            <p class="text-black-50 mb-0">
+                                Establishes and cultivates trusting relationships with new and existing clients, proactively helping them understand their investments and planning strategies, often with support and input from senior team members <br><br>
+                                Assists Financial Advisors / Private Wealth Advisors in the development and delivery of financial and investment strategies that aim to address each client’s specific goals and concerns <br><br>
+                                Prepares performance reports and other data for clients, that may involve evaluating account performance, analyzing investment portfolio holdings, and generating quarterly investment performance monitors <br><br>
+                                Engages in collaborative dialogue with clients and prospects to determine investment objectives, current portfolio status, risk tolerance, and other information necessary to craft comprehensive financial strategy and decision making
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                <!-- Featured Project Row 2-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="https://www.ionos.ca/digitalguide/fileadmin/DigitalGuide/Teaser/pair-programming-t.jpg" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>The Pivot.</h4>
+                            <p class="text-black-50 mb-0">
+                                There were moments when we did not know what to do next, but with enough determination, we succeeded. Initially, we planned to create more of a research tool. We planned to web scrape 16 job descriptions from 4 industries. We wanted to analyze them to determine if they were more masculine or feminine. The web app would include charts with statistics regarding gender in the tech, finance, beauty, and fashion industries.
+We completed the web scraping portion to the best of our ability. <br><br> Then, we then reviewed our objectives and determined that it would be more beneficial for users to understand the gender bias in whichever job description they choose to analyze. Whether you are writing job descriptions or want to learn more about the bias associated with a job you are applying for, our tool will be a step in developing your understanding of gender bias in the workplace.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="https://www.betterteam.com/images/web-developer-job-description-6494x4331-2020128.jpeg" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">The Site.<br><br></h4>
+                                    <p class="mb-0 text-white-50">Lastly, we faced some challenges when implementing Flask and developing the website. We had high expectations for what we could do with our web application. We wanted it to be aesthetically pleasing and follow UX/UI best practices. <br><br> We struggled initially to develop such a product ourselves. Eventually, we chose to use an existing template similar to what we were looking to produce. We edited the template to our liking and are delighted with the result.
+                                    <br><br> We hope that our Gender Bias Helper tool is useful to you! Please reach out to jzlatin1@babson.edu or grahardja1@babson.edu with any questions or advice for improvement! </p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5"> Julia Zlatin and Gabriel Rahardja &copy; OIM3640</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
